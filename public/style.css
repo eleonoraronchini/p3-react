@@ -1,0 +1,326 @@
+/* Reset globale */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo della pagina con sfondo dinamico */
+body {
+  background: rgb(46, 63, 87);
+  background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33, 44, 61, 1) 42%, rgb(15, 21, 29) 100%);
+}
+
+/* Barra laterale (Sidebar) */
+.navbar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 230px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background-color: black;
+  z-index: 1200;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a {
+  color: rgb(145, 145, 145) !important;
+  transition: color 0.3s;
+}
+
+.navbar.fixed-left .navbar-collapse .navbar-nav a:hover {
+  color: white !important;
+}
+
+.navbar.fixed-left .navbar-brand {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 3px;
+}
+
+.nav-btn {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-btn a {
+  color: rgb(145, 145, 145);
+  text-decoration: none;
+}
+
+.nav-link i {
+  font-size: 1.5em;
+}
+
+/* Pulsanti di registrazione e login */
+.signup-btn,
+.login-btn {
+  border-radius: 20px;
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.signup-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+.signup-btn:hover {
+  color: white;
+  background-color: rgb(60, 211, 60);
+  border: 1px solid rgb(60, 211, 60);
+}
+
+.login-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.login-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+/* Mobile Responsiveness: Sidebar nascosta sui dispositivi più piccoli */
+@media screen and (max-width: 936px) {
+  #sidebar {
+    display: none;
+  }
+
+  .navbar.fixed-left {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Sezione player inferiore */
+.bg-container {
+  height: 6rem;
+  background-color: #282828;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.playerControls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playerControls a img {
+  width: 20px;
+  margin-top: 1rem;
+  filter: brightness(60%);
+  transition: filter 0.3s;
+}
+
+.playerControls a:hover img {
+  filter: brightness(80%);
+}
+
+.progress {
+  background-color: #414141;
+  height: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress div {
+  background-color: #60d342;
+  height: 100%;
+  width: 40%; /* Imposta la larghezza della progress bar */
+}
+
+/* Sezione principale (Music Section) */
+.mainLinks {
+  margin-top: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.mainLinks a {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+.mainLinks a:hover {
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.imgLinks a p,
+.mainPage p {
+  padding-top: 8px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+#rock, #pop, #hiphop {
+  color: white;
+  font-weight: 700;
+  padding-top: 50px;
+}
+
+#hipHopSection {
+  margin-bottom: 7rem;
+}
+
+.mainPage img {
+  width: 200px;
+}
+
+/* Ottimizzazione per immagini */
+.music-section img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+/* Responsività per la sezione principale */
+@media (max-width: 768px) {
+  .mainPage {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .music-section img {
+    width: 80%;
+  }
+}
+
+/* Responsive Layout per colonna */
+@media (max-width: 768px) {
+  .col-md-9 {
+    padding-left: 0;
+  }
+
+  .row-cols-sm-2 {
+    margin: 0;
+  }
+
+  .mainLinks {
+    flex-direction: column;
+  }
+
+  .playerControls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .playerControls a img {
+    width: 50px;
+  }
+}
+/* Sezione player inferiore */
+.bg-container {
+  height: 6rem;
+  background-color: #282828;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.playerControls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.playerControls a img {
+  width: 40px;
+  margin-top: 1rem;
+  filter: brightness(60%);
+  transition: filter 0.3s;
+}
+
+.playerControls a:hover img {
+  filter: brightness(80%);
+}
+
+.progress {
+  background-color: #414141;
+  height: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress div {
+  background-color: #60d342;
+  height: 100%;
+  width: 40%; /* Imposta la larghezza della progress bar */
+}
+
+.song-info {
+  color: white;
+  margin-top: 1rem;
+}
+
+.song-info h4 {
+  font-size: 1.2rem;
+}
+
+.song-info p {
+  font-size: 1rem;
+}
+
+/* Aggiungi padding alla sezione principale per lasciare spazio tra le card e la barra del player */
+.mainPage {
+  padding-bottom: 100px; /* Aggiunge padding per separare la parte finale della pagina */
+}
+/* Stili per il player */
+.playerControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.player-button img {
+  width: 50px; /* Ridotto per evitare che i tasti siano troppo grandi */
+  height: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.player-button img:hover {
+  transform: scale(1.2); 
+}
+
+/* Barra di progresso */
+.progress {
+  width: 100%;
+  height: 8px; 
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.progress-bar-custom {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+.song-info h4 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.song-info p {
+  font-size: 1rem;
+  color: #888;
+}
