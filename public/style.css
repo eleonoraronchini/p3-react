@@ -9,6 +9,7 @@
 body {
   background: rgb(46, 63, 87);
   background: linear-gradient(90deg, rgb(63, 86, 119) 0%, rgba(33, 44, 61, 1) 42%, rgb(15, 21, 29) 100%);
+  color: white;
 }
 
 /* Barra laterale (Sidebar) */
@@ -114,72 +115,51 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 15px;
 }
 
-.playerControls a img {
-  width: 20px;
-  margin-top: 1rem;
-  filter: brightness(60%);
-  transition: filter 0.3s;
+.player-button {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.playerControls a:hover img {
-  filter: brightness(80%);
+.player-button:hover {
+  transform: scale(1.2);
 }
 
+/* Barra di progresso */
 .progress {
-  background-color: #414141;
-  height: 5px;
   width: 100%;
-  margin-top: 10px;
+  height: 8px; 
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
-.progress div {
-  background-color: #60d342;
+.progress-bar-custom {
   height: 100%;
-  width: 40%; /* Imposta la larghezza della progress bar */
+  background-color: #4CAF50;
+  border-radius: 5px;
 }
 
-/* Sezione principale (Music Section) */
-.mainLinks {
-  margin-top: 1.5rem;
-  justify-content: space-evenly;
-}
-
-.mainLinks a {
+.song-info {
   color: white;
-  font-weight: 700;
-  font-size: 12px;
-  opacity: 0.3;
-  text-decoration: none;
+  margin-top: 1rem;
 }
 
-.mainLinks a:hover {
-  text-decoration: none;
-  opacity: 1;
-  transition: opacity 0.3s;
+.song-info h4 {
+  font-size: 1.2rem;
 }
 
-.imgLinks a p,
-.mainPage p {
-  padding-top: 8px;
-  font-size: 12px;
-  color: white;
-  font-weight: 700;
+.song-info p {
+  font-size: 1rem;
 }
 
-#rock, #pop, #hiphop {
-  color: white;
-  font-weight: 700;
-  padding-top: 50px;
-}
-
-#hipHopSection {
-  margin-bottom: 7rem;
-}
-
-.mainPage img {
-  width: 200px;
+/* Aggiungi padding alla sezione principale per lasciare spazio tra le card e la barra del player */
+.mainPage {
+  padding-bottom: 100px; /* Aggiunge padding per separare la parte finale della pagina */
 }
 
 /* Ottimizzazione per immagini */
@@ -219,108 +199,4 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-
-  .playerControls a img {
-    width: 50px;
-  }
-}
-/* Sezione player inferiore */
-.bg-container {
-  height: 6rem;
-  background-color: #282828;
-  padding: 10px 0;
-  z-index: 10;
-}
-
-.playerControls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.playerControls a img {
-  width: 40px;
-  margin-top: 1rem;
-  filter: brightness(60%);
-  transition: filter 0.3s;
-}
-
-.playerControls a:hover img {
-  filter: brightness(80%);
-}
-
-.progress {
-  background-color: #414141;
-  height: 5px;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.progress div {
-  background-color: #60d342;
-  height: 100%;
-  width: 40%; /* Imposta la larghezza della progress bar */
-}
-
-.song-info {
-  color: white;
-  margin-top: 1rem;
-}
-
-.song-info h4 {
-  font-size: 1.2rem;
-}
-
-.song-info p {
-  font-size: 1rem;
-}
-
-/* Aggiungi padding alla sezione principale per lasciare spazio tra le card e la barra del player */
-.mainPage {
-  padding-bottom: 100px; /* Aggiunge padding per separare la parte finale della pagina */
-}
-/* Stili per il player */
-.playerControls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
-}
-
-.player-button img {
-  width: 50px; /* Ridotto per evitare che i tasti siano troppo grandi */
-  height: 20px;
-  margin: 0 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.player-button img:hover {
-  transform: scale(1.2); 
-}
-
-/* Barra di progresso */
-.progress {
-  width: 100%;
-  height: 8px; 
-  background-color: #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-.progress-bar-custom {
-  height: 100%;
-  background-color: #4CAF50;
-  border-radius: 5px;
-}
-
-.song-info h4 {
-  font-size: 1.25rem;
-  margin: 10px 0;
-}
-
-.song-info p {
-  font-size: 1rem;
-  color: #888;
 }
